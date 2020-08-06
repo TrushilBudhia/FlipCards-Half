@@ -1,0 +1,215 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,800);
+
+body {
+    font-size: 16px;
+    line-height: 22px;
+    color: #555;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+
+#section-feature ul {
+    margin: 100px 0 0 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+}
+
+#section-feature li {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    height: 250px;
+    padding: 2%;
+    float: left;
+    margin-bottom: 10px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#section-feature .card-wrap {
+    background-repeat: no-repeat;
+    position: absolute;
+    max-width: 280px;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    margin-left: -140px;
+    top: 0;
+    -moz-perspective: 600px;
+    -webkit-perspective: 600px;
+    -ms-perspective: 600px;
+    -o-perspective: 600px;
+    perspective: 600px;
+    cursor: pointer;
+}
+
+.card-left,
+.card-right,
+.card-left-full,
+.card-right-full {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    overflow: hidden;
+}
+
+.card-icon {
+    position: absolute;
+    top: 30px;
+    text-align: center;
+    width: 100%;
+    left: 0;
+    width: 200%;
+    color: #0099CC;
+}
+
+
+.card-left-full .card-icon,
+.card-right-full .card-icon {
+    color: #fff;
+}
+
+.card-right,
+.card-right-full {
+    left: auto;
+    right: 0;
+}
+
+.card-left-full,
+.card-right-full {
+    background-color: #333;
+    z-index: 9;
+    color: #fff;
+}
+
+.card-wrap a {
+    color: #0099CC;
+    text-decoration: none;
+}
+
+.card-left,
+.card-right {
+    background-color: #fff;
+    z-index: 10;
+}
+
+.card-wrap > .card-right-full,
+.card-wrap > .card-right {
+    background-position: right -30px;
+}
+
+.card-wrap > .card-right,
+.card-wrap > .card-left-full {
+    -moz-backface-visibility: hidden;
+    -moz-transform-style: preserve-3d;
+    -moz-transform-origin: 0 0;
+    -moz-transform: rotateY(0deg);
+
+    -webkit-backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: rotateY(0deg);
+
+    -o-backface-visibility: hidden;
+    -o-transform-style: preserve-3d;
+    -o-transform-origin: 0 0;
+    -o-transform: rotateY(0deg);
+
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transform-origin: 0 0;
+    transform: rotateY(0deg);
+}
+
+.card-wrap.hover > .card-right {
+    -webkit-transform: rotateY(-45deg);
+    -moz-transform: rotateY(-45deg);
+    -ms-transform: rotateY(-45deg);
+    -o-transform: rotateY(-45deg);
+    transform: rotateY(-45deg);
+    background-color: #ececec;
+}
+
+.card-wrap > .card-left-full {
+    -moz-transform-origin: 100% 0;
+    -webkit-transform-origin: 100% 0;
+    -o-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+    -moz-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.card-wrap.active > .card-right,
+.card-wrap.hover.active > .card-right {
+    -moz-transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+
+.card-wrap.active > .card-left-full {
+    -moz-transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+
+.active .card-left-full,
+.active .card-right-full {
+    z-index: 11;
+}
+
+.card-wrap div h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 22px;
+}
+
+.card-wrap div h3,
+.card-wrap div p {
+    width: 200%;
+    position: absolute;
+    text-align: center;
+    left: 0;
+    top: 140px;
+}
+
+.card-wrap div p {
+    padding: 0 10%;
+    line-height: 18px;
+    font-size: 13px;
+    top: 170px;
+}
+
+.card-wrap div.card-right h3,
+.card-wrap div.card-right-full h3,
+.card-wrap div.card-right p,
+.card-wrap div.card-right-full p,
+.card-right .card-icon,
+.card-right-full .card-icon
+{
+    left: auto;
+    right: 0;
+}
+
+.card-wrap div.card-left-full h3,
+.card-wrap div.card-right-full h3 {
+    top: 115px;
+}
